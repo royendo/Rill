@@ -1,0 +1,193 @@
+# Dashboard YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/dashboards
+# This file was generated using AI.
+
+type: metrics_view
+title: Metrics for out_s0_model table
+model: out_s0_model
+timeseries: "2024-03-29T01:03:27.786Z"
+dimensions:
+  - label: Column01
+    column: column01
+    description: ""
+  - label: Column02
+    column: column02
+    description: ""
+  - label: Column03
+    column: column03
+    description: ""
+  - label: Admin
+    column: admin
+    description: ""
+  - label: Column05
+    column: column05
+    description: ""
+  - label: Column06
+    column: column06
+    description: ""
+  - label: Column07
+    column: column07
+    description: ""
+  - label: Sol Batch Perf Optim
+    column: SOL_BATCH_PERF_OPTIM
+    description: ""
+  - label: Column09
+    column: column09
+    description: ""
+  - label: Webapp Backend
+    column: WEBAPP_BACKEND
+    description: ""
+  - label: Psnzw0c
+    column: PsNzw0c
+    description: ""
+  - label: Column12
+    column: column12
+    description: ""
+  - label: Lh3jebioxpqhbgvx
+    column: lH3jebioxPQHBGvx
+    description: ""
+  - label: /Opt/Dataiku/Data/Bin/Python
+    column: /opt/dataiku/data/bin/python
+    description: ""
+  - label: Column20
+    column: column20
+    description: ""
+  - label: Column21
+    column: column21
+    description: ""
+  - label: Column22
+    column: column22
+    description: ""
+  - label: Column23
+    column: column23
+    description: ""
+  - label: Local Process
+    column: LOCAL_PROCESS
+    description: ""
+  - label: Column26
+    column: column26
+    description: ""
+  - label: Column27
+    column: column27
+    description: ""
+  - label: Compute-Resource-Usage-Update
+    column: compute-resource-usage-update
+    description: ""
+  - label: Column29
+    column: column29
+    description: ""
+  - label: 2024-03-29T01:03
+    column: 2024-03-29T01:03
+    description: ""
+  - label: 5-Fri
+    column: 5-Fri
+    description: ""
+  - label: Column36
+    column: column36
+    description: ""
+  - label: Column37
+    column: column37
+    description: ""
+  - label: Column38
+    column: column38
+    description: ""
+  - label: Column39
+    column: column39
+    description: ""
+  - label: Column40
+    column: column40
+    description: ""
+  - label: Column41
+    column: column41
+    description: ""
+  - label: Column42
+    column: column42
+    description: ""
+  - label: Column43
+    column: column43
+    description: ""
+  - label: Column44
+    column: column44
+    description: ""
+  - label: Column45
+    column: column45
+    description: ""
+measures:
+  - name: count_records
+    label: Count of Records
+    expression: COUNT(*)
+    description: Total number of records in the table.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: avg_float_column_0
+    label: Average of Float Column 0
+    expression: AVG("0.0")
+    description: Average value of the float column "0.0".
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: min_int_column_105
+    label: Minimum of Int Column 105
+    expression: MIN("105")
+    description: Minimum value in the integer column "105".
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: max_int_column_62675
+    label: Maximum of Int Column 62675
+    expression: MAX("62675")
+    description: Maximum value in the integer column "62675".
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: count_distinct_column01
+    label: Count of Distinct Values in Column01
+    expression: COUNT(DISTINCT "column01")
+    description: Number of unique values in the column "column01".
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: sum_int_column_2970
+    label: Sum of Int Column 2970
+    expression: SUM("2970")
+    description: Total sum of values in the integer column "2970".
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: avg_code_string_length_column02
+    label: Average Length of Code String in Column02
+    expression: AVG(LENGTH("column02"))
+    description: Average length of code strings in the column "column02".
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: avg_code_string_length_column06
+    label: Average Length of Code String in Column06
+    expression: AVG(LENGTH("column06"))
+    description: Average length of code strings in the column "column06".
+    format_preset: humanize
+    valid_percent_of_total: false
+available_time_zones:
+  - America/Los_Angeles
+  - America/Chicago
+  - America/New_York
+  - Europe/London
+  - Europe/Paris
+  - Asia/Jerusalem
+  - Europe/Moscow
+  - Asia/Kolkata
+  - Asia/Shanghai
+  - Asia/Tokyo
+  - Australia/Sydney
+available_time_ranges:
+  - PT6H
+  - PT24H
+  - P7D
+  - P14D
+  - P4W
+  - P3M
+  - P12M
+  - rill-TD
+  - rill-WTD
+  - rill-MTD
+  - rill-QTD
+  - rill-YTD
+  - rill-PDC
+  - rill-PWC
+  - rill-PMC
+  - rill-PQC
+  - rill-PYC
