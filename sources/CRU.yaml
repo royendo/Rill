@@ -4,4 +4,4 @@
 type: source
 
 connector: "duckdb"
-sql: "select * from read_csv('data/TZtest.csv', auto_detect=true, ignore_errors=1, header=true)"
+sql: "select * from 'gs://bucket-rendo/dataiku/SOL_DKU_MONITORING/CRU'"
