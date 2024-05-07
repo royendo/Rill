@@ -7,3 +7,7 @@ title: "Untitled Rill Project"
 
 mock_users:
 - email: m.royendo@gmail.com
+
+connectors:
+- name: slack
+  type: slack
