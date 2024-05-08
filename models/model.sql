@@ -3,7 +3,7 @@
 
 
 
-SELECT t1.*, t2.age, t2.gender, t2.revenue, t2.purchased
+SELECT t1.*, t2.age, t2.gender, t2.revenue, t2.price_purchased
 FROM web_history_gcs t1
 JOIN (
     SELECT
@@ -11,7 +11,7 @@ JOIN (
         customer_id,
         gender,
         revenue,
-        purchased
+        price_purchased
     FROM crm_history_gcs
 ) t2 ON t1.customer_id = t2.customer_id
-WHERE t2.age <= 100;
+WHERE t2.age <= 100
