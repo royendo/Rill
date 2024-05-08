@@ -1,6 +1,9 @@
 compiler: rillv1
 
-title: "Untitled Rill Project"
+title: Interview Preparation Project
+sources:
+  refresh:
+    every: 24h
 
 # These are example mock users to test your security policies.
 # For more information, see the documentation: https://docs.rilldata.com/manage/security
@@ -11,3 +14,19 @@ mock_users:
 connectors:
 - name: slack
   type: slack
+
+models:
+  materialize: true
+
+
+dashboards:
+  first_day_of_week: 7
+  available_time_zones:
+    - America/Los_Angeles
+    - America/New_York
+    - Asia/Tokyo
+
+# Setting variables
+vars:
+  numeric_var: 10
+  string_var: "string_value"
