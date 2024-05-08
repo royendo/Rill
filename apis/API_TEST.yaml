@@ -1,2 +1,4 @@
 type: api
 # uses cases? When would you need to API the dashboards outside of Rill?
+
+sql: "select * from airline_stocks_model"
