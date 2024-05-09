@@ -4,19 +4,8 @@
 type: source
 
 connector: "duckdb"
-sql: "select * from read_csv('gs://bucket-rendo/dataiku/DUCKDB/airline_stocks_copy/out-s0.csv.gz', 
+sql: "select * from read_csv('gs://bucket-rendo/dataiku/DUCKDB/airline_stocks_copy/out-s0.csv', 
 auto_detect=true,
 ignore_errors=1,
-header=true,
-columns = {
-  'Close' : 'DOUBLE',
-  'Adj Close' : 'DOUBLE',
-  'Volume' :'INT',
-  'Date' :'DATE',
-  'TICKER' : 'VARCHAR',
-  'Open' :'DOUBLE',
-  'High':'DOUBLE',
-  'Low': 'DOUBLE'
-
-}
-)"
+header=True
+ )"

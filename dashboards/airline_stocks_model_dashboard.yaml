@@ -5,7 +5,7 @@ default_theme: new_theme
 type: metrics_view
 title: Metrics for Analyzing Airline Stocks
 model: airline_stocks_model
-timeseries: date_column
+timeseries: Date
 dimensions:
   - label: Ticker
     column: Ticker
@@ -43,7 +43,7 @@ measures:
     valid_percent_of_total: false
   - name: total_trading_days
     label: Total Trading Days
-    expression: COUNT(date_column)
+    expression: COUNT(Date)
     description: Total number of trading days for airline stocks.
     format_preset: humanize
     valid_percent_of_total: false
