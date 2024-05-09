@@ -3,6 +3,6 @@
 
 select *
  from airline_stocks 
-{{ if dev }} LIMIT 100 {{ end }}
+-- {{ if dev }} LIMIT 100 {{ end }}
 
 
