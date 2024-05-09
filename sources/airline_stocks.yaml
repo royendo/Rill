@@ -9,15 +9,14 @@ auto_detect=true,
 ignore_errors=1,
 header=true,
 columns = {
-'Close': 'VARCHAR',
-'Adj Close':'VARCHAR',
-'Volume':'VARCHAR',
-'Date':'VARCHAR',
-'TICKER':'VARCHAR',
-'Open':'VARCHAR',
-'High':'VARCHAR',
-'Low': 'VARCHAR'
-
+  'Close' : 'DOUBLE',
+  'Adj Close' : 'DOUBLE',
+  'Volume' :'INT',
+  'Date' :'DATE',
+  'TICKER' : 'VARCHAR',
+  'Open' :'DOUBLE',
+  'High':'DOUBLE',
+  'Low': 'DOUBLE'
 
 }
 )"

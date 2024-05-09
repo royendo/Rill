@@ -14,7 +14,7 @@ JOIN (
         price_purchased
     FROM crm_history_gcs
 ) t2 ON t1.customer_id = t2.customer_id
-WHERE t2.age <= 100 {{ if dev }} LIMIT 100 {{ end }}
+WHERE t2.age <= 100 {{ if dev }} LIMIT 100 {{ end }} 
 
 -- can do various types of if else stuff
 -- https://docs.rilldata.com/build/models/environments
