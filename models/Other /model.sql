@@ -17,4 +17,4 @@ JOIN (
 WHERE t2.age <= 100 {{ if dev }} LIMIT 100 {{ end }} 
 
 -- can do various types of if else stuff
--- https://docs.rilldata.com/build/models/environments
+-- https://docs.rilldata.com/build/models/environments 
