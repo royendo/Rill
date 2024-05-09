@@ -8,7 +8,7 @@ FROM web_history_gcs t1
 JOIN (
     SELECT
         EXTRACT(YEAR FROM age(current_date(), birth)) AS age,
-        customer_id,
+        customer_id, 
         gender,
         revenue,
         price_purchased

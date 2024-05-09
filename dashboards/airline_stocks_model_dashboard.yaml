@@ -4,7 +4,7 @@
 default_theme: new_theme
 type: metrics_view
 title: Metrics for Analyzing Airline Stocks
-model: airline_stocks_model
+model: airline_stocks_model_1
 timeseries: Date
 dimensions:
   - label: Ticker
