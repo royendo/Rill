@@ -1,0 +1,82 @@
+# Dashboard YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/dashboards
+# This file was generated using AI.
+
+type: metrics_view
+title: Metrics for US Cost of Living Analysis
+model: US Cost of Living
+timeseries: RealDate
+dimensions:
+  - label: Regionname
+    column: RegionName
+    description: ""
+  - label: Statename
+    column: StateName
+    description: ""
+measures:
+  - name: average_rent
+    label: Average Rent
+    expression: AVG("Average Rent")
+    description: Average of the rent prices across all regions and dates
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: max_rent
+    label: Maximum Rent
+    expression: MAX("Average Rent")
+    description: Maximum rent price recorded across all regions and dates
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: min_rent
+    label: Minimum Rent
+    expression: MIN("Average Rent")
+    description: Minimum rent price recorded across all regions and dates
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_regions
+    label: Total Regions
+    expression: COUNT(DISTINCT "RegionName")
+    description: Count of unique regions in the dataset
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_dates
+    label: Total Dates
+    expression: COUNT(DISTINCT "RealDate")
+    description: Count of unique dates in the dataset
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_rent
+    label: Total Rent
+    expression: SUM("Average Rent")
+    description: Total rent expenditure across all regions and dates
+    format_preset: humanize
+    valid_percent_of_total: true
+available_time_zones:
+  - America/Los_Angeles
+  - America/Chicago
+  - America/New_York
+  - Europe/London
+  - Europe/Paris
+  - Asia/Jerusalem
+  - Europe/Moscow
+  - Asia/Kolkata
+  - Asia/Shanghai
+  - Asia/Tokyo
+  - Australia/Sydney
+available_time_ranges:
+  - PT6H
+  - PT24H
+  - P7D
+  - P14D
+  - P4W
+  - P3M
+  - P12M
+  - rill-TD
+  - rill-WTD
+  - rill-MTD
+  - rill-QTD
+  - rill-YTD
+  - rill-PDC
+  - rill-PWC
+  - rill-PMC
+  - rill-PQC
+  - rill-PYC
