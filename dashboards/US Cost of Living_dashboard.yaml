@@ -32,24 +32,6 @@ measures:
     description: Minimum rent price recorded across all regions and dates
     format_preset: humanize
     valid_percent_of_total: false
-  - name: total_regions
-    label: Total Regions
-    expression: COUNT(DISTINCT "RegionName")
-    description: Count of unique regions in the dataset
-    format_preset: humanize
-    valid_percent_of_total: false
-  - name: total_dates
-    label: Total Dates
-    expression: COUNT(DISTINCT "RealDate")
-    description: Count of unique dates in the dataset
-    format_preset: humanize
-    valid_percent_of_total: false
-  - name: total_rent
-    label: Total Rent
-    expression: SUM("Average Rent")
-    description: Total rent expenditure across all regions and dates
-    format_preset: humanize
-    valid_percent_of_total: true
 available_time_zones:
   - America/Los_Angeles
   - America/Chicago
@@ -80,3 +62,4 @@ available_time_ranges:
   - rill-PMC
   - rill-PQC
   - rill-PYC
+default_theme: kennedy
