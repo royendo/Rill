@@ -4,7 +4,7 @@
 
 type: metrics_view
 title: Metrics for Model Table
-model: model_1
+model: web_history_gcs_model
 dimensions:
   - label: Customer Id
     column: customer_id
