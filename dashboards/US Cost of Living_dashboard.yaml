@@ -4,7 +4,7 @@
 
 type: metrics_view
 title: Metrics for US Cost of Living Analysis
-model: US Cost of Living
+model: USCostofLiving
 timeseries: RealDate
 dimensions:
   - label: Regionname
