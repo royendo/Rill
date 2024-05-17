@@ -1,0 +1,103 @@
+# Dashboard YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/dashboards
+# This file was generated using AI.
+
+type: metrics_view
+title: Metrics for pp_complete table
+table: pp_complete
+timeseries: date
+dimensions:
+  - label: Postcode1
+    column: postcode1
+    description: ""
+  - label: Postcode2
+    column: postcode2
+    description: ""
+  - label: Type
+    column: type
+    description: ""
+  - label: Duration
+    column: duration
+    description: ""
+  - label: Addr1
+    column: addr1
+    description: ""
+  - label: Addr2
+    column: addr2
+    description: ""
+  - label: Street
+    column: street
+    description: ""
+  - label: Locality
+    column: locality
+    description: ""
+  - label: Town
+    column: town
+    description: ""
+  - label: District
+    column: district
+    description: ""
+  - label: County
+    column: county
+    description: ""
+measures:
+  - name: average_price
+    label: Average Price
+    expression: AVG(price)
+    description: The average price of items.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_sales
+    label: Total Sales
+    expression: COUNT(*)
+    description: The total number of sales.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: max_price
+    label: Maximum Price
+    expression: MAX(price)
+    description: The maximum price of an item.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: new_items_count
+    label: New Items Count
+    expression: COUNTIf(is_new = 1)
+    description: The count of new items.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: unique_postcode1_count
+    label: Unique Postcode1 Count
+    expression: COUNT(DISTINCT postcode1)
+    description: The count of unique values in postcode1.
+    format_preset: humanize
+    valid_percent_of_total: false
+available_time_zones:
+  - America/Los_Angeles
+  - America/Chicago
+  - America/New_York
+  - Europe/London
+  - Europe/Paris
+  - Asia/Jerusalem
+  - Europe/Moscow
+  - Asia/Kolkata
+  - Asia/Shanghai
+  - Asia/Tokyo
+  - Australia/Sydney
+available_time_ranges:
+  - PT6H
+  - PT24H
+  - P7D
+  - P14D
+  - P4W
+  - P3M
+  - P12M
+  - rill-TD
+  - rill-WTD
+  - rill-MTD
+  - rill-QTD
+  - rill-YTD
+  - rill-PDC
+  - rill-PWC
+  - rill-PMC
+  - rill-PQC
+  - rill-PYC

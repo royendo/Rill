@@ -1,0 +1,103 @@
+# Dashboard YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/dashboards
+# This file was generated using AI.
+
+type: metrics_view
+title: Metrics for Airline Stocks Model
+model: airline_stocks_model
+timeseries: Date
+dimensions:
+  - label: Ticker
+    column: Ticker
+    description: ""
+measures:
+  - name: average_open_price
+    label: Average Open Price
+    expression: AVG(Open)
+    description: Average of the opening prices of airline stocks.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: max_high_price
+    label: Maximum High Price
+    expression: MAX(High)
+    description: Maximum value of the high prices of airline stocks.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: min_low_price
+    label: Minimum Low Price
+    expression: MIN(Low)
+    description: Minimum value of the low prices of airline stocks.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_volume
+    label: Total Volume
+    expression: SUM(Volume)
+    description: Total volume of stocks traded for airlines.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: average_close_price
+    label: Average Close Price
+    expression: AVG(Close)
+    description: Average of the closing prices of airline stocks.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: max_adj_close_price
+    label: Maximum Adjusted Close Price
+    expression: MAX("Adj Close")
+    description: Maximum value of the adjusted close prices of airline stocks.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: min_adj_close_price
+    label: Minimum Adjusted Close Price
+    expression: MIN("Adj Close")
+    description: Minimum value of the adjusted close prices of airline stocks.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_records
+    label: Total Records
+    expression: COUNT(*)
+    description: Total number of records in the airline stocks model.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: average_price_range
+    label: Average Price Range
+    expression: AVG(High - Low)
+    description: Average price range (high - low) of airline stocks.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: average_volume_per_day
+    label: Average Volume per Day
+    expression: AVG(Volume)
+    description: Average volume of stocks traded per day for airlines.
+    format_preset: humanize
+    valid_percent_of_total: false
+available_time_zones:
+  - America/Los_Angeles
+  - America/Chicago
+  - America/New_York
+  - Europe/London
+  - Europe/Paris
+  - Asia/Jerusalem
+  - Europe/Moscow
+  - Asia/Kolkata
+  - Asia/Shanghai
+  - Asia/Tokyo
+  - Australia/Sydney
+available_time_ranges:
+  - PT6H
+  - PT24H
+  - P7D
+  - P14D
+  - P4W
+  - P3M
+  - P12M
+  - rill-TD
+  - rill-WTD
+  - rill-MTD
+  - rill-QTD
+  - rill-YTD
+  - rill-PDC
+  - rill-PWC
+  - rill-PMC
+  - rill-PQC
+  - rill-PYC

@@ -1,0 +1,17 @@
+# Source YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/sources
+
+type: source
+
+connector: "duckdb"
+sql: "select * from read_csv('gs://bucket-rendo/dataiku/DUCKDB/web_history_copy/out-s0.csv.gz', 
+  auto_detect=true,
+  ignore_errors=1,
+  header=true,
+  columns = {
+    'customer_id':'VARCHAR',
+    'IP':'VARCHAR',
+    'page_visited':'DOUBLE',
+    'campaign':'VARCHAR'
+  }
+  )"

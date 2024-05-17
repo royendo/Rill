@@ -1,0 +1,111 @@
+# Dashboard YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/dashboards
+# This file was generated using AI.
+
+type: metrics_view
+title: Metrics for Model Table
+model: web_history_gcs_model
+dimensions:
+  - label: Customer Id
+    column: customer_id
+    description: ""
+  - label: Ip
+    column: IP
+    description: ""
+  - label: Campaign
+    column: campaign
+    description: ""
+  - label: Gender
+    column: gender
+    description: ""
+measures:
+  - name: average_revenue
+    label: Average Revenue
+    expression: AVG(revenue)
+    description: Calculates the average revenue generated.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_revenue
+    label: Total Revenue
+    expression: SUM(revenue)
+    description: Calculates the total revenue generated.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: average_price_purchased
+    label: Average Price Purchased
+    expression: AVG(price_purchased)
+    description: Calculates the average price of items purchased.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_price_purchased
+    label: Total Price Purchased
+    expression: SUM(price_purchased)
+    description: Calculates the total price of items purchased.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_customers
+    label: Total Customers
+    expression: COUNT(customer_id)
+    description: Counts the total number of customers.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: average_age
+    label: Average Age
+    expression: AVG(age)
+    description: Calculates the average age of customers.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: max_age
+    label: Maximum Age
+    expression: MAX(age)
+    description: Finds the maximum age among customers.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_page_visited
+    label: Total Page Visited
+    expression: SUM(page_visited)
+    description: Calculates the total number of pages visited.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: average_page_visited
+    label: Average Page Visited
+    expression: AVG(page_visited)
+    description: Calculates the average number of pages visited.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_campaigns
+    label: Total Campaigns
+    expression: COUNT(DISTINCT campaign)
+    description: Counts the total number of unique campaigns.
+    format_preset: humanize
+    valid_percent_of_total: false
+available_time_zones:
+  - America/Los_Angeles
+  - America/Chicago
+  - America/New_York
+  - Europe/London
+  - Europe/Paris
+  - Asia/Jerusalem
+  - Europe/Moscow
+  - Asia/Kolkata
+  - Asia/Shanghai
+  - Asia/Tokyo
+  - Australia/Sydney
+available_time_ranges:
+  - PT6H
+  - PT24H
+  - P7D
+  - P14D
+  - P4W
+  - P3M
+  - P12M
+  - rill-TD
+  - rill-WTD
+  - rill-MTD
+  - rill-QTD
+  - rill-YTD
+  - rill-PDC
+  - rill-PWC
+  - rill-PMC
+  - rill-PQC
+  - rill-PYC
