@@ -1,5 +1,0 @@
-type: source
-connector: "gcs"
-uri: "gs://bucket-rendo/dataiku/DUCKDB/airline_stocks_copy/*.csv"
-
-# ingest.allow_schema_relaxation: false
