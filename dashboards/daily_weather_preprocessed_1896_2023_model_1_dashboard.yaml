@@ -4,7 +4,7 @@
 
 type: metrics_view
 title: Metrics for Daily Weather Data Analysis
-model: daily_weather_preprocessed_1896_2023_model
+model: daily_weather_preprocessed_1896_2023_model_1
 timeseries: MeasuredDate
 dimensions:
   - label: Stationid
@@ -104,10 +104,10 @@ measures:
     description: Calculate the average relative humidity recorded.
     format_preset: humanize
     valid_percent_of_total: false
-  - name: average_wind_speed
-    label: Average Wind Speed
-    expression: AVG(WS)
-    description: Calculate the average wind speed recorded.
+  - name: max_wind_speed
+    label: Max Wind Speed
+    expression: MAX(WS)
+    description: Find the maximum wind speed recorded.
     format_preset: humanize
     valid_percent_of_total: false
   - name: total_precipitation
@@ -122,22 +122,22 @@ measures:
     description: Calculate the average global radiation recorded.
     format_preset: humanize
     valid_percent_of_total: false
-  - name: max_uv_index
-    label: Max UV Index
-    expression: MAX(CAST(UVI AS FLOAT))
-    description: Find the maximum UV index recorded.
+  - name: average_soil_temperature_0cm
+    label: Average Soil Temperature at 0cm
+    expression: AVG(CAST(TxSoil0cm AS FLOAT))
+    description: Calculate the average soil temperature at 0cm depth.
     format_preset: humanize
     valid_percent_of_total: false
-  - name: average_cloud_amount
-    label: Average Cloud Amount
-    expression: AVG(CAST("Cloud Amount" AS FLOAT))
-    description: Calculate the average cloud amount recorded.
+  - name: total_sunshine_hours
+    label: Total Sunshine Hours
+    expression: SUM(CAST(SunShine AS FLOAT))
+    description: Calculate the total sunshine hours recorded.
     format_preset: humanize
     valid_percent_of_total: false
-  - name: total_evaporation
-    label: Total Evaporation
-    expression: SUM(CAST(EvapA AS FLOAT))
-    description: Calculate the total evaporation recorded.
+  - name: average_uv_index
+    label: Average UV Index
+    expression: AVG(CAST(UVI AS FLOAT))
+    description: Calculate the average UV index recorded.
     format_preset: humanize
     valid_percent_of_total: false
 available_time_zones:

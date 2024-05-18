@@ -1,37 +1,10 @@
 compiler: rillv1
 
-title: Interview Preparation Project
-sources:
-  refresh:
-    every: 24h
+title: "Untitled Rill Project"
 
 # These are example mock users to test your security policies.
 # For more information, see the documentation: https://docs.rilldata.com/manage/security
 
 mock_users:
-- email: m.royendo@gmail.com
-
-connectors:
-- name: slack
-  type: slack
-- type: snowflake
-  name: snowflake-a
-- type: snowflake
-  name: snowflake-b 
-
-
-models:
-  materialize: true
-
-
-dashboards:
-  first_day_of_week: 7
-  available_time_zones:
-    - America/Los_Angeles
-    - America/New_York
-    - Asia/Tokyo
-
-# Setting variables
-vars:
-  numeric_var: 10
-  string_var: "string_value"
+- email: john@yourcompany.com
+- email: jane@partnercompany.com
