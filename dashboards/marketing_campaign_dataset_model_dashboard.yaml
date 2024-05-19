@@ -1,0 +1,115 @@
+# Dashboard YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/dashboards
+# This file was generated using AI.
+
+type: metrics_view
+title: Marketing Campaign Metrics
+model: marketing_campaign_dataset_model
+timeseries: Date
+dimensions:
+  - label: Company
+    column: Company
+    description: ""
+  - label: Campaign Type
+    column: Campaign_Type
+    description: ""
+  - label: Target Audience
+    column: Target_Audience
+    description: ""
+  - label: Gender
+    column: gender
+    description: ""
+  - label: Location
+    column: Location
+    description: ""
+  - label: Language
+    column: Language
+    description: ""
+  - label: Channel Used
+    column: Channel_Used
+    description: ""
+measures:
+  - name: total_effectiveness
+    label: Total Effectiveness
+    expression: SUM(effectivness)
+    description: Clicks and impressions over cost per day ( Acquisition / Duration)
+    format_preset: humanize
+    valid_percent_of_total: true
+  - name: max_roi
+    label: Maximum ROI
+    expression: AVG(ROI)
+    description: The highest Return on Investment (ROI) achieved among all campaigns.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: average_engagement_score
+    label: Average Engagement Score
+    expression: AVG(Engagement_Score)
+    description: The average engagement score across all marketing campaigns.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_campaigns
+    label: Total Campaigns
+    expression: COUNT(*)
+    description: The total number of marketing campaigns in the dataset.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: min_cost_per_day
+    label: Minimum Cost per Day
+    expression: MIN("Cost per DAY")
+    description: The lowest cost incurred per day for a marketing campaign.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: average_roi
+    label: Average ROI
+    expression: AVG(ROI)
+    description: The average Return on Investment (ROI) across all campaigns.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_cost
+    label: Total Cost
+    expression: SUM("Cost per DAY")
+    description: The total cost incurred for all marketing campaigns.
+    format_preset: humanize
+    valid_percent_of_total: true
+  - name: max_engagement_score
+    label: Maximum Engagement Score
+    expression: MAX(Engagement_Score)
+    description: The highest engagement score achieved among all campaigns.
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: average_effectiveness
+    label: Average Effectiveness
+    expression: AVG(effectivness)
+    description: The average effectiveness score of all marketing campaigns.
+    format_preset: humanize
+    valid_percent_of_total: false
+available_time_zones:
+  - America/Los_Angeles
+  - America/Chicago
+  - America/New_York
+  - Europe/London
+  - Europe/Paris
+  - Asia/Jerusalem
+  - Europe/Moscow
+  - Asia/Kolkata
+  - Asia/Shanghai
+  - Asia/Tokyo
+  - Australia/Sydney
+available_time_ranges:
+  - PT6H
+  - PT24H
+  - P7D
+  - P14D
+  - P4W
+  - P3M
+  - P12M
+  - rill-TD
+  - rill-WTD
+  - rill-MTD
+  - rill-QTD
+  - rill-YTD
+  - rill-PDC
+  - rill-PWC
+  - rill-PMC
+  - rill-PQC
+  - rill-PYC
