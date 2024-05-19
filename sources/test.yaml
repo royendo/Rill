@@ -4,4 +4,4 @@
 type: source
 
 connector: "duckdb"
-sql: "select * from read_csv('data/daily_weather_preprocessed_1896_2023.csv', auto_detect=true, ignore_errors=1, header=true)"
+sql: "select * from read_csv('data/test.csv', auto_detect=true, ignore_errors=1, header=true)"
