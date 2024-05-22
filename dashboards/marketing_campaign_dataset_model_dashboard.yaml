@@ -37,7 +37,7 @@ measures:
     valid_percent_of_total: true
   - name: max_roi
     label: Maximum ROI
-    expression: AVG(ROI)
+    expression: MAX(ROI)
     description: The highest Return on Investment (ROI) achieved among all campaigns.
     format_preset: humanize
     valid_percent_of_total: false
