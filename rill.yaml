@@ -8,9 +8,10 @@ description: advertising, finance, what metrics are important / semantic layer]
 
 security:
   access: true
-  access: ".user.email == takafumi.stone@gmail.com"
-  access: ".user.email == roy.endo0315gmail.com"
+  access: "{{.user.email}} == 'takafumi.stone@gmail.com'"
+  access: "{{.user.email}} == 'roy.endo0315gmail.com'"
   
 mock_users:
-  - email: roy.endo0315gmail.com
-  - email: takafumi.stone@gmail.com
+  - email: 'roy.endo0315gmail.com'
+  - email: 'takafumi.stone@gmail.com'
+  
