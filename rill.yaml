@@ -10,6 +10,7 @@ description: advertising, finance, what metrics are important / semantic layer]
 #.user.email
 
 security:
+  access: true
   access: ".user.email == 'takafumi.stone@gmail.com'"
   access: ".user.email == 'roy.endo0315gmail.com'"
   
