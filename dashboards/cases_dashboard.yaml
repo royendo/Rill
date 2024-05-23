@@ -1,0 +1,94 @@
+# Dashboard YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/dashboards
+# This file was generated using AI.
+
+type: metrics_view
+title: Metrics for Cases Table
+table: cases
+timeseries: created_at
+dimensions:
+  - label: Agent
+    column: agent
+    description: ""
+  - label: Platform
+    column: platform
+    description: ""
+measures:
+  - name: average_cases_per_day
+    label: Average Cases Per Day
+    expression: AVG(1)
+    description: Average number of cases created per day
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_cases
+    label: Total Cases
+    expression: COUNT(*)
+    description: Total number of cases
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_cases_by_platform
+    label: Total Cases by Platform
+    expression: COUNT(*) FILTER(WHERE platform = 'platform_name')
+    description: Total number of cases for a specific platform
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: max_cases_in_a_day
+    label: Max Cases in a Day
+    expression: MAX(1)
+    description: Maximum number of cases created in a single day
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: min_cases_in_a_day
+    label: Min Cases in a Day
+    expression: MIN(1)
+    description: Minimum number of cases created in a single day
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: average_cases_per_hour
+    label: Average Cases Per Hour
+    expression: AVG(1)
+    description: Average number of cases created per hour
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: total_cases_by_agent
+    label: Total Cases by Agent
+    expression: COUNT(*) FILTER(WHERE agent = 'agent_name')
+    description: Total number of cases handled by a specific agent
+    format_preset: humanize
+    valid_percent_of_total: false
+  - name: average_cases_per_week
+    label: Average Cases Per Week
+    expression: AVG(1)
+    description: Average number of cases created per week
+    format_preset: humanize
+    valid_percent_of_total: false
+available_time_zones:
+  - America/Los_Angeles
+  - America/Chicago
+  - America/New_York
+  - Europe/London
+  - Europe/Paris
+  - Asia/Jerusalem
+  - Europe/Moscow
+  - Asia/Kolkata
+  - Asia/Shanghai
+  - Asia/Tokyo
+  - Australia/Sydney
+available_time_ranges:
+  - PT6H
+  - PT24H
+  - P7D
+  - P14D
+  - P4W
+  - P3M
+  - P12M
+  - rill-TD
+  - rill-WTD
+  - rill-MTD
+  - rill-QTD
+  - rill-YTD
+  - rill-PDC
+  - rill-PWC
+  - rill-PMC
+  - rill-PQC
+  - rill-PYC
